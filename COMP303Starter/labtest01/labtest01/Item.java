@@ -7,7 +7,7 @@ import java.util.Comparator;
  * Jar of peanut butter, package of pasta,
  * whatever.
  */
-public class Item
+public class Item implements ItemInterface
 {
 	private final String aName;
 	private final int aId;
@@ -29,6 +29,7 @@ public class Item
 	/**
 	 * @return The name of the item
 	 */
+	@Override
 	public String getName()
 	{
 		return aName;
@@ -37,6 +38,7 @@ public class Item
 	/**
 	 * @return The ID of the item.
 	 */
+	@Override
 	public int getId()
 	{
 		return aId;
@@ -45,6 +47,7 @@ public class Item
 	/**
 	 * @return The price of the item in cents
 	 */
+	@Override
 	public int getPrice()
 	{
 		return aPrice;

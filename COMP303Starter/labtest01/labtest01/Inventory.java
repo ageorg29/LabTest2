@@ -83,6 +83,11 @@ public class Inventory
 	 * */
 	public int totalValue()
 	{
-		return aInventory.size();
+		int quantity = 0;
+		for (Item item : aInventory.keySet())
+		{
+			quantity += this.pAvailable(item);
+		}
+		return quantity;
 	}
 }
